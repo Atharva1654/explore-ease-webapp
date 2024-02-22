@@ -4,12 +4,11 @@ import { getOwnerById, propertyDataFetch } from "../services/Owner";
 import { Button, Container, Row, Table } from "react-bootstrap";
 import { fetchChatById, fetchChatReceiverById, messagesReceived, sendChatData } from "../services/Chat";
 import { fetchById } from "../services/User";
-import { useNavigate } from "react-router-dom";
 import { NavigationBar } from "./NavigationBar";
 
 export function TempView() {
   const ownerId = sessionStorage.getItem("owner-id");
-   const navigate = useNavigate();
+
   const [details, setDetails] = useState([]);
   const [userData, setUserData] = useState([]);
   const [showChatWindow, setShowChatWindow] = useState(false);
@@ -57,7 +56,7 @@ export function TempView() {
         setMessages(combinedMessages);
         console.log(messages);
         
-        const id="mehul";
+        // const id="atha";
 
       } catch (error) {
         console.log(error);
@@ -65,7 +64,7 @@ export function TempView() {
     }
 
     fetchData();
-  }, [ownerId]);
+  }, [ownerId, messages]);
 
   const toggleChatWindow = () => {
     setShowChatWindow(!showChatWindow);
@@ -108,10 +107,9 @@ export function TempView() {
     <>
     <NavigationBar></NavigationBar>
     <div className="maindiv">
-       
       <div className="left">
         <div className="heading">
-          <h2>Profile</h2>
+          <h2>Agent Info</h2>
           <hr />
         </div>
         <div>
@@ -130,20 +128,17 @@ export function TempView() {
           <div className="userdiv">
             <b>Phone No: {profileOwner.phoneNo}</b>
           </div>
-          <Button variant="success" className="nxtbtn" onClick={()=>{
-          navigate(`/private`);
-        }}>Back</Button>
         </div>
       </div>
 
       <div className="middletemp">
-        <center><h3>Property Details</h3></center>
+        <center><h3>Tour Details</h3></center>
         <table className="table">
           <thead>
             <tr>
-              <th>Rental Type</th>
-              <th>Rent</th>
-              <th>Furnished</th>
+              <th>Tour Type</th>
+              <th>Cost</th>
+              <th>Role</th>
               <th>Address</th>
               <th>Image</th>
             </tr>
@@ -151,9 +146,9 @@ export function TempView() {
           <tbody>
             {details.map((property, index) => (
               <tr key={index}>
-                <td>{property.rentalType}</td>
+                <td>{property.tourType}</td>
                 <td>{property.rent}</td>
-                <td>{property.furnished}</td>
+                <td>{property.role}</td>
                 <td>{property.address}</td>
                 <td><img src={`http://localhost:9090/fetchImageById/${property.id}`} alt="Property" height="100" width="100" /></td>
               </tr>
@@ -163,7 +158,7 @@ export function TempView() {
       </div>
 
       <div className="right">
-        <center><h2>Messages</h2></center>
+        <center><h2>Unique Senders</h2></center>
         <Container className="containerHost">
           <Row>
             <Table striped bordered hover style={{ textAlign: "center" }}>

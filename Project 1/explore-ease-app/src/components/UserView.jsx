@@ -39,9 +39,8 @@ export function UserView() {
 
   return (
     <>
-     <NavigationBar></NavigationBar>
+    <NavigationBar></NavigationBar>
     <div className="userview">
-      
       <div className="leftuser">
         <div className="heading">
           <h2>User Info</h2>

@@ -17,10 +17,9 @@ function Home() {
                 <input
                     className="searchBox"
                     type="text"
-                    placeholder="                     Search your Dream Place"
+                    placeholder="Search your Dream Place"
                 />
-                {/* <FaSearch className="search-icon" size={20} /> */}
-                {/* <FaSearch className="search-icon" size={20} /> */}
+                <FaSearch className="search-icon" size={24} />
             </div>
             <Carousel className="carousel-container">
                 <Carousel.Item>

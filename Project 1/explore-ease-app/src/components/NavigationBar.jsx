@@ -9,8 +9,6 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { useNavigate } from "react-router-dom";
 import img from "../media/Logo.jpg";
 
-import "../Css/NavigationBar.css";
-
 export function NavigationBar() {
 
     const navigate = useNavigate();
@@ -36,11 +34,7 @@ export function NavigationBar() {
     }, []);
 
     return (
-        // <Navbar expand="lg" className="bg-body-tertiary" style={{ backgroundImage: `url(${require('../media/background.jpg')})`}}>
-                    // <Navbar expand="lg" className="bg-body-tertiary" style={{backgroundColor : "#E0F7FA"}} >
-                    <Navbar expand="lg" style={{ backgroundColor: "#E0F7FA" }}>
-
-            {/* <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)' }}> */}
+        <Navbar expand="lg" className="bg-body-tertiary">
             <Container>
                 <LinkContainer to="/">
                     <Nav.Link className="hover-effect">
@@ -50,24 +44,24 @@ export function NavigationBar() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link as={Link} to="/"><b>Home</b></Nav.Link>
-                        <Nav.Link as={Link} to="/aboutus"><b>About Us</b></Nav.Link>
-                        <Nav.Link as={Link} to="/contactus"><b>Contact Us</b></Nav.Link>
+                        <Nav.Link as={Link} to="/">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/aboutus">About Us</Nav.Link>
+                        <Nav.Link as={Link} to="/contactus">Contact Us</Nav.Link>
                     </Nav>
                     {!status && (
                     <Nav>
                         <NavDropdown title="Login" id="basic-nav-dropdown">
-                            <NavDropdown.Item as={Link} to="/login-user"><b>User</b></NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/login-owner"><b>Agent</b></NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/login-service"><b>Service</b></NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/login-host"><b>Admin</b></NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/login-user">User</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/login-owner">Agent</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/login-service">Service</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/login-host">Admin</NavDropdown.Item>
 
 
                         </NavDropdown>
                         <NavDropdown title="Register" id="basic-nav-dropdown">
-                            <NavDropdown.Item as={Link} to="/registrationuser"><b>User</b></NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/registrationowner"><b>Agent</b></NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/registrationserviceprovider"><b>Service Provider</b></NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/registrationuser">User</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/registrationowner">Agent</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/registrationserviceprovider">Service Provider</NavDropdown.Item>
 
                         </NavDropdown>
                     </Nav>
@@ -86,7 +80,6 @@ export function NavigationBar() {
 
                 </Navbar.Collapse>
             </Container>
-            {/* </div> */}
         </Navbar>
     );
 }

@@ -1,14 +1,19 @@
-.loginbody {
+/* General styles */
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    /* background-image: url(BG5.svg); */
+}
+
+/* Login page styles */
+.loginbody {
+    background-image: url(BG5.svg);
     height: 800px;
 }
 
 .login-container {
     max-width: 25rem;
-    margin: 50px auto 0px;
+    margin: 50px auto 0;
     padding: 30px;
     background-color: #ffffff;
     box-shadow: 10px 12px 15px rgba(0, 0, 0, 0.3);
@@ -25,21 +30,20 @@ label {
 }
 
 input {
-	width: 100%;
+    width: 100%;
     padding: 8px;
     margin-bottom: 20px;
     box-sizing: border-box;
-	transition: background-color 0.3s ease;
-	outline: none;
-	border: none;
-  border-bottom: 1px solid black;
-  outline: none;
+    transition: background-color 0.3s ease;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
 }
 
 button {
     width: 100%;
     padding: 8px;
-    background-color: #007BFF;
+    background-color: #B3E5FC;
     color: #ffffff;
     border: none;
     cursor: pointer;
@@ -48,14 +52,13 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-.nxtbtn{
-    margin-top: 20px;
-	border-radius: 3px;
-	background-color: #D8232A;
-	width: 15rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 
-	
+.nxtbtn {
+    margin-top: 20px;
+    border-radius: 3px;
+    background-color: #D8232A;
+    width: 15rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .or-separator {
@@ -68,36 +71,45 @@ button:hover {
     position: absolute;
     left: 0;
     right: 0;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     padding: 10px;
 }
 
+/* Login options */
 .login-options {
-	height: 2rem;
+    height: 2rem;
     display: flex;
-	align-items: center;
+    align-items: center;
     justify-content: center;
-	text-align: center;
-
-  
+    text-align: center;
 }
 
-a {
-    color: #D8232A;
-    text-decoration: none;
+.login-options button.login-google {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
 }
 
-a:hover {
-    text-decoration: underline;
+.login-options button.login-google img {
+    width: 30px;
+    margin-right: 10px;
 }
-.Foot{
-	max-width: 25rem;
+
+.login-options button.login-google p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Footer */
+.Foot {
+    max-width: 25rem;
     padding: 30px;
-    margin: 0px auto;
-    background-color: #ebebeb;
-    box-shadow: 10 12px 15px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    background-color: #ECEFF1;
+    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.3);
 }
-.txt{
-	color: black;
-	
+
+.Foot a {
+    color: black;
 }

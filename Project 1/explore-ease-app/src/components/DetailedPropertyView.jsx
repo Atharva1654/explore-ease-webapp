@@ -59,7 +59,6 @@ export function DetailedPropertyView() {
   const handleGoBack = () => {
     // navigate(`/userview`);
     navigate(-1);
-
   };
   const handleSendMessage = async () => {
     if (newMessage.trim() !== "") {
@@ -99,11 +98,9 @@ export function DetailedPropertyView() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <>
-    <NavigationBar></NavigationBar>
+    <><NavigationBar></NavigationBar>
     <div className="userview">
-      
-      <Button className="backbtn"   variant="btn btn-outline-success" onClick={handleGoBack}>
+      <Button className="backbtn" onClick={handleGoBack}>
         Back
       </Button>
 

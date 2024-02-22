@@ -39,7 +39,7 @@ import { PrivateRouteService } from './components/PrivateRouteService';
 function App() {
   return (
     <BrowserRouter>
-      {/* <NavigationBar></NavigationBar> */}
+      {/* <NavigationBar></NavigationBar> shwet gandu*/}
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         {/* <Route path="/login" element={<Login></Login>}></Route> */}
