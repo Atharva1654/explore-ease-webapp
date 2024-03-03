@@ -132,13 +132,13 @@ export function TempView() {
       </div>
 
       <div className="middletemp">
-        <center><h3>Tour Details</h3></center>
+        <center><h3>Property Details</h3></center>
         <table className="table">
           <thead>
             <tr>
-              <th>Tour Type</th>
+              <th>Rent Type</th>
               <th>Cost</th>
-              <th>Role</th>
+              <th>Furnished</th>
               <th>Address</th>
               <th>Image</th>
             </tr>
@@ -146,9 +146,9 @@ export function TempView() {
           <tbody>
             {details.map((property, index) => (
               <tr key={index}>
-                <td>{property.tourType}</td>
+                <td>{property.rentalType}</td>
                 <td>{property.rent}</td>
-                <td>{property.role}</td>
+                <td>{property.furnished}</td>
                 <td>{property.address}</td>
                 <td><img src={`http://localhost:9090/fetchImageById/${property.id}`} alt="Property" height="100" width="100" /></td>
               </tr>

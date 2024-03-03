@@ -9,10 +9,11 @@
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 9);
     padding: 10px;
-    border-radius: 20px;
-    width: 80%;
+    border-radius: 40px;
+    width: 50%;
     max-width: 500px;
     z-index: 999;
+    border: 3px solid #81D4FA;
 }
 
 .searchBox {
@@ -24,16 +25,13 @@
     font-size: 16px;
 }
 
+
 .search-icon {
     cursor: pointer;
 }
 
 .carousel-container {
     margin-top: 0; 
-}
-
-.img-bulding {
-    margin-top: 20px;
 }
 
 .card-container {
@@ -63,3 +61,12 @@
     font-family: cursive;
 }
 
+.carousel-container {
+    max-width: 2000px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the carousel */
+}
+
+.carousel-item img {
+    max-height: 700px; /* Adjust the height of the images */
+    width: auto; /* Maintain aspect ratio */
+}

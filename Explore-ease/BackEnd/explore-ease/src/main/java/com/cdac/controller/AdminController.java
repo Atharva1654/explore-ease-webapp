@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cdac.service.AdminService;
+import com.cdac.service.EmailService;
 import com.cdac.service.PropertyOwnerService;
 import com.cdac.service.ServiceProviderService;
 import com.cdac.dto.AdminRespone;
@@ -27,6 +28,8 @@ public class AdminController {
 
 	 @Autowired
 	 private AdminService adminService;
+	 @Autowired
+	 private EmailService emailService;
 	 
 	 @Autowired
 	 private PropertyOwnerService propertyOwnerService;
@@ -62,6 +65,17 @@ public class AdminController {
 	         
 	     }
 	 }
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 	 @GetMapping("/hostapproval")
 	 public  List<PropertyOwner> pendingUser() {
 		  List<PropertyOwner> list  =  adminService.propertyOwnerForValidation(); 
@@ -71,6 +85,8 @@ public class AdminController {
 	 public  void pendingUser(@PathVariable int id) {
 		  PropertyOwner propertyOwner =   adminService.validationApprovedForOwner(id);
 		  propertyOwnerService.approvalByHost(propertyOwner);
+		  emailService.sendEmailApproval(propertyOwner);
+		  
 		 
 	  }
 	 @GetMapping("/hostrejectionbyid/{id}")
@@ -79,6 +95,19 @@ public class AdminController {
 		  propertyOwnerService.rejectByHost(propertyOwner);
 		 
 	 }
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 	 
 	 @GetMapping("/providerapproval")
 	 public List<ServiceProvider> pendingProvider(){
@@ -90,6 +119,8 @@ public class AdminController {
 	 public ResponseEntity<String> pendingProvider(@PathVariable int id) {
 		 ServiceProvider serviceProvider = adminService.validationApprovedForProvider(id);
 		 serviceProviderService.approvalByHost(serviceProvider);
+		 emailService.sendEmailApprovalServiceProvider(serviceProvider);
+		 
 		 return ResponseEntity.ok("Profile has been approved by admin");
 	 }
 	 
@@ -101,6 +132,20 @@ public class AdminController {
 		 
 	 }
 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 @GetMapping("/fetchFeedbackDetails")
 public  List<Feedback> getFeedbackDetails() {
 	  List<Feedback> list  =  adminService.getFeedbackDetails(); 

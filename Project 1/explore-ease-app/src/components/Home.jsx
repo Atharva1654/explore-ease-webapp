@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import { CardGroup, Col, Container } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
+import img1 from "../media/doodle.png";
 
 import '../Css/Home.css';
 import { NavigationBar } from './NavigationBar';
@@ -12,14 +13,22 @@ import { NavigationBar } from './NavigationBar';
 function Home() {
     return (
         <div className="home-container">
+            <style>
+                {`
+            body, .container_text-center {
+                background-color: #E1F5FE;
+            }
+        `}
+            </style>
             <NavigationBar></NavigationBar>
             <div className="search-container">
                 <input
                     className="searchBox"
                     type="text"
-                    placeholder="Search your Dream Place"
+                    placeholder="                                Search your Dream Place"
+                // style={{ borderColor: 'blue' }}
                 />
-                <FaSearch className="search-icon" size={24} />
+                {/* <FaSearch className="search-icon" size={24} /> */}
             </div>
             <Carousel className="carousel-container">
                 <Carousel.Item>
@@ -81,7 +90,7 @@ function Home() {
 
             <center>
                 <div className="img-travel">
-                    <img src="https://thumbs.dreamstime.com/b/india-icons-set-indian-attractions-line-design-tourism-isolated-vector-illustration-traditional-symbols-outline-black-thin-107968654.jpg" height={300} alt="lol" />
+                    <img src={img1} height={300} alt="lol" />
                     <br />
                     <h5>Explore-EASE</h5>
                     <h2 style={{ fontFamily: 'cursive' }}>Trending destinations</h2>
@@ -149,10 +158,7 @@ function Home() {
                     </Row>
                 </Container>
             </section>
-<br></br>
-<br></br>
-
-<center>
+            <center>
                 <div className="img-travel">
                     <img src="https://www.msbrightspotsofhope.org/wp-content/uploads/2017/11/line-clipart-page-break-7.png" height={200} alt="lol" />
                     <br />
@@ -162,67 +168,67 @@ function Home() {
             </center>
 
             <br></br>
-<CardGroup >        
-<Col style={{ width: '300px', height: '30px' }}>
-          <Card >
-          <Card.Img  variant="top" src="https://www.bhaktibharat.com/photo/mandir/iskcon-temple-chowpatty/3.jpg" width="300" height="200" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
+            <CardGroup >
+                <Col style={{ width: '300px', height: '30px' }}>
+                    <Card >
+                        <Card.Img variant="top" src="https://www.bhaktibharat.com/photo/mandir/iskcon-temple-chowpatty/3.jpg" width="300" height="200" />
+                        <Card.Body>
+                            <Card.Title>Card title</Card.Title>
+                            <Card.Text>
+                                This is a longer card with supporting text below as a natural
+                                lead-in to additional content. This content is a little bit
+                                longer.
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
 
-        <Col style={{ width: '300px', height: '600px' }}>
-          <Card>
-          <Card.Img  variant="top" src="https://www.activitymanali.com/images/activity_banner/1684211262.png" width="300" height="200"/>
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
+                <Col style={{ width: '300px', height: '600px' }}>
+                    <Card>
+                        <Card.Img variant="top" src="https://www.activitymanali.com/images/activity_banner/1684211262.png" width="300" height="200" />
+                        <Card.Body>
+                            <Card.Title>Card title</Card.Title>
+                            <Card.Text>
+                                This is a longer card with supporting text below as a natural
+                                lead-in to additional content. This content is a little bit
+                                longer.
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
 
-        <Col style={{ width: '300px', height: '500px' }}>
-          <Card>
-          <Card.Img  variant="top" src="https://www.visitdubai.com/-/media/gathercontent/poi/s/skydive-dubai/fallback-image/sky-dive-dubai-3.jpg" width="300" height="200"/>
- 
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
+                <Col style={{ width: '300px', height: '500px' }}>
+                    <Card>
+                        <Card.Img variant="top" src="https://www.visitdubai.com/-/media/gathercontent/poi/s/skydive-dubai/fallback-image/sky-dive-dubai-3.jpg" width="300" height="200" />
 
-        <Col style={{ width: '300px', height: '500px' }}>
-          <Card>
-          <Card.Img  variant="top" src="https://static.toiimg.com/photo/60763742.cms" width="300" height="200"/>
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        </CardGroup>
+                        <Card.Body>
+                            <Card.Title>Card title</Card.Title>
+                            <Card.Text>
+                                This is a longer card with supporting text below as a natural
+                                lead-in to additional content. This content is a little bit
+                                longer.
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
+
+                <Col style={{ width: '300px', height: '500px' }}>
+                    <Card>
+                        <Card.Img variant="top" src="https://static.toiimg.com/photo/60763742.cms" width="300" height="200" />
+                        <Card.Body>
+                            <Card.Title>Card title</Card.Title>
+                            <Card.Text>
+                                This is a longer card with supporting text below as a natural
+                                lead-in to additional content. This content is a little bit
+                                longer.
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </CardGroup>
             <center>
                 <div className="img-travel">
-                    <img src="https://thumbs.dreamstime.com/b/india-icons-set-indian-attractions-line-design-tourism-isolated-vector-illustration-traditional-symbols-outline-black-thin-107968654.jpg" height={300} alt="lol" />
+                    <img src={img1} height={300} alt="lol" />
                     <br />
                     <h3>Explore-EASE</h3>
                     <h4>New Listing</h4>
